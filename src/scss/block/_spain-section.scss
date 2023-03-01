@@ -1,0 +1,65 @@
+.spain-section {
+    background-image: url('@img/spain-house.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 227px 0 90px;
+
+    @include breakpoint ('md') {
+        padding: 210px 0 90px;
+    }
+
+    @include breakpoint ('sm') {
+        padding: 60px 0;
+    }
+
+    &_mountain {
+        background-image: url('@img/spain-mountain.png');
+        background-repeat: no-repeat;
+        padding: 227px 0 90px;
+
+        @include breakpoint ('md') {
+            padding: 210px 0 90px;
+        }
+
+        @include breakpoint ('sm') {
+            padding: 60px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__text-holder {
+        background-color: $black-opacity;
+        opacity: 0.9;
+        padding: 49px 32px 50px;
+        max-width: 543px;
+    }
+
+    &__pseudo-title {
+        display: block;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: $balck-white;
+        padding: 0 0 23px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        padding: 0 0 13px;
+    }
+
+    &__description {
+        color: $balck-white;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        max-width: 508px;
+        padding: 0 0 46px;
+    }
+}

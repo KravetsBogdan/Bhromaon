@@ -1,0 +1,84 @@
+.our-tourist-section {
+    background-image: url('@img/our-tourist-section.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    padding: 128px 0 199px;
+    text-align: center;
+
+    @include breakpoint ('md') {
+        padding: 60px 0 40px;
+    }
+
+    &__title {
+        font-family: 'Aleo', sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 26px;
+        padding: 0 0 91px;
+
+        @include breakpoint ('md') {
+            padding: 0 0 40px;
+        }
+
+        @include breakpoint ('sm') {
+            padding: 0 0 30px;
+            font-size: 29px;
+        }
+    }
+}
+
+.sam-interview {
+    display: flex;
+    width: 100%;
+
+    @include breakpoint ('md') {
+        display: block;
+    }
+
+    &__img {
+        max-width: 445px;
+
+        @include breakpoint ('md') {
+            max-width: 100%;
+        }
+    }
+
+    &__text-holder {
+        width: 100%;
+        max-width: 668px;
+        background-color: $black;
+        padding: 49px 62px;
+        text-align: left;
+
+        @include breakpoint ('lg') {
+            padding: 35px 30px;
+        }
+
+        @include breakpoint ('my') {
+            padding: 25px 20px;
+        }
+
+        @include breakpoint ('ms') {
+            padding: 15px 10px;
+        }
+
+        @include breakpoint ('md') {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            padding: 20px 40px;
+        }
+
+        @include breakpoint ('xs') {
+            padding: 10px 20px;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        padding: 0 0 8px;
+    }
+}

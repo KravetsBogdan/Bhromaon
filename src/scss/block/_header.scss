@@ -1,0 +1,138 @@
+.header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 30px 0;
+    background-color: $blue;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &.active{
+        nav{
+            transform: translateX(0);
+        }
+        .nav-opener{
+            span{
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+
+            &::before{
+                top: 50%;
+                left:50%;
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+
+            &::after{
+                bottom:50%;
+                left:50%;
+                transform: translate(-50%,-50%) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.nav{
+    @include breakpoint ('md'){
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 2;
+        background-color: $blue;
+        transform: translateX(100%);
+        transition: all ease-in-out 0.3s;
+    }
+    &__list{
+        list-style: none;
+
+        @include breakpoint ('md'){
+            display: flex;
+            flex-direction: column;
+            margin: 0 0 20px;
+            width: 100%;
+        }
+    }
+
+    &__item{
+        font-family: 'Aleo', sans-serif;
+        display: inline-block;
+
+        @include breakpoint ('md'){
+            width: 100%;
+        }
+    }
+
+    &__link{
+        padding: 0 12px;
+
+        @include breakpoint ('md'){
+            display: block;
+            text-align: center;
+            padding: 10px;
+        }
+    }
+}
+
+.nav-opener{
+    display: none;
+
+    @include breakpoint ('md'){
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    &::before{
+        content: '';
+        width: 30px;
+        height: 2px;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        transition: all ease-in-out 0.3s;
+    }
+
+    &::after{
+        content: '';
+        width: 30px;
+        height: 2px;
+        border-radius: 4px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        transition: all ease-in-out 0.3s;
+    }
+
+    span{
+        width: 30px;
+        height: 2px;
+        border-radius: 4px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        transition: all ease-in-out 0.3s;
+    }
+}

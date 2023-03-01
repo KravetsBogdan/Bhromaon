@@ -1,0 +1,54 @@
+.footer {
+    background-color: $black-opacity;
+    padding: 122px 0 47px;
+    text-align: center;
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
+        padding: 0 0 8px;
+    }
+
+    &__description {
+        display: block;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        padding: 0 0 15px;
+    }
+}
+
+.sprite {
+    display: flex;
+    justify-content: center;
+
+    &__icon {
+        background-image: url('@img/Icon.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        display: block;
+        width: 30px;
+        height: 20px;
+
+        &_facebook {
+            background-position: 0 0;
+        }
+
+        &_twiter {
+            background-position: -30px 0;
+        }
+
+        &_in {
+            background-position: -65px 0;
+        }
+
+        &_youtube {
+            background-position: -105px 0;
+        }
+
+        &_p {
+            background-position: -145px 0;
+        }
+    }
+}
